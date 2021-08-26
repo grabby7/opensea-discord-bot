@@ -22,7 +22,7 @@ const  discordSetup = async (): Promise<TextChannel> => {
 
 const buildMessage = (sale: any) => (
 	//if ( (sale.asset.name.substr(0, 8) == "Unigrids") || (sale.asset.name.substr(0, 9) == "Beatboxes") ) {
-	//const xname = sale.asset.name.substr(0, 4);
+	if ( (sale.asset.name.substr(0, 4) == "Pigm") || (sale.asset.name.substr(0, 4) == "Chro") ) {
 	
 	  new Discord.MessageEmbed()
 		.setColor('#0099ff')
@@ -40,7 +40,7 @@ const buildMessage = (sale: any) => (
 	  //.setImage(sale.asset.image_url)
 		.setTimestamp(Date.parse(`${sale?.created_date}Z`))
 		.setFooter('Sold on OpenSea', 'https://files.readme.io/566c72b-opensea-logomark-full-colored.png')
-	//)
+	)
 )
 
 async function main() {
