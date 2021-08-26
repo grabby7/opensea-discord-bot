@@ -22,6 +22,7 @@ const  discordSetup = async (): Promise<TextChannel> => {
 
 const buildMessage = (sale: any) => (
 	//if ( (sale.asset.name.substr(0, 8) == "Unigrids") || (sale.asset.name.substr(0, 9) == "Beatboxes") ) {
+	const xname = sale.asset.name.substr(0, 4);
 	  new Discord.MessageEmbed()
 		.setColor('#0099ff')
 		.setTitle(sale.asset.name + ' sold!')
@@ -29,7 +30,7 @@ const buildMessage = (sale: any) => (
 		//.setAuthor('OpenSea Bot', 'https://files.readme.io/566c72b-opensea-logomark-full-colored.png', 'https://github.com/sbauch/opensea-discord-bot')
 		.setThumbnail(sale.asset.image_url)
 		.addFields(
-			{ name: 'test', value: sale.asset.name.substr(0, 4) },
+			{ name: 'test', value: xname },
 			{ name: 'Name', value: sale.asset.name },
 			{ name: 'Amount', value: `${ethers.utils.formatEther(sale.total_price || '0')}${ethers.constants.EtherSymbol}`},
 			{ name: 'Buyer', value: sale?.winner_account?.address, },
