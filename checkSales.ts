@@ -22,7 +22,8 @@ const  discordSetup = async (): Promise<TextChannel> => {
 
 const buildMessage = (sale: any) => (
 	//if ( (sale.asset.name.substr(0, 8) == "Unigrids") || (sale.asset.name.substr(0, 9) == "Beatboxes") ) {
-	const xname = sale.asset.name.substr(0, 4);
+	//const xname = sale.asset.name.substr(0, 4);
+	xname = sale.asset.name.substr(0, 4);
 	  new Discord.MessageEmbed()
 		.setColor('#0099ff')
 		.setTitle(sale.asset.name + ' sold!')
