@@ -22,7 +22,7 @@ const  discordSetup = async (): Promise<TextChannel> => {
 
 const buildMessage = (sale: any) => (
 	  new Discord.MessageEmbed()
-		.setColor('#0099ff')
+		.setColor('#23FF00')
 		.setTitle(sale.asset.name + ' sold!')
 		.setURL(sale.asset.permalink)
 		//.setAuthor('OpenSea Bot', 'https://files.readme.io/566c72b-opensea-logomark-full-colored.png', 'https://github.com/sbauch/opensea-discord-bot')
