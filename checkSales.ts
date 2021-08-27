@@ -60,7 +60,7 @@ async function main() {
     
   return await Promise.all(
     openSeaResponse?.asset_events?.reverse().map(async (sale: any) => {
-      if (!sale.asset.name.match(/^(Chromie|Unigrids|Beatboxes)/)) {
+      if (!sale.asset.name.match(/^(Unigrids|Beatboxes)/)) {
         return Promise.resolve();
       }
       const message = buildMessage(sale);
