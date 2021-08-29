@@ -48,7 +48,7 @@ async function main() {
     event_type: 'successful',
     only_opensea: 'false',
     occurred_after: hoursAgo.toString(), 
-    collection_slug: process.env.COLLECTION_SLUG!,
+    collection_slug: process.env.COLLECTION_SLUGB!,
   })
 
 
