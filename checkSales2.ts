@@ -48,7 +48,6 @@ async function main() {
     event_type: 'successful',
     only_opensea: 'false',
     occurred_after: hoursAgo.toString(), 
-    collection_slug: process.env.COLLECTION_SLUGB!,
   })
 
   if (process.env.CONTRACT_ADDRESS !== OPENSEA_SHARED_STOREFRONT_ADDRESS) {
